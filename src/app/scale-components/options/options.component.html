@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <div class="grid-2">
+    
+    <div>      
+      <input type="text" placeholder="Key" #key style="text-transform:lowercase;" value="a" required>
+    </div>
+    
+    <div>      
+      <input type="text" placeholder="scale" #scale style="text-transform:lowercase;" value="major" required>
+    </div>
+
+    <div>
+      <button (click)="print_scale(key, scale)">Submit</button>
+    </div>
+
+  </div>
+
+  <div class="grid-3">
+    <div>
+      Scale: {{ scale_text }}
+    </div>
+    <div>
+      Chords: {{ chord }}
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <app-string [string_name]="this.keys[7]" [scale]="this.scale_text"></app-string>
+  <app-string [string_name]="this.keys[2]" [scale]="this.scale_text"></app-string>
+  <app-string [string_name]="this.keys[10]" [scale]="this.scale_text"></app-string>
+  <app-string [string_name]="this.keys[5]" [scale]="this.scale_text"></app-string>
+  <app-string [string_name]="this.keys[0]" [scale]="this.scale_text"></app-string>
+  <app-string [string_name]="this.keys[7]" [scale]="this.scale_text"></app-string>
+  <app-fret-note></app-fret-note>
+</div>

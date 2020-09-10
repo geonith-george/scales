@@ -1,0 +1,6 @@
+<div class="grid-container">
+    <div *ngFor="let fret of chromaic_scale" [style.background-color]="color">
+         <!-- <app-element-color *ngIf="false" [note]="fret"></app-element-color> -->
+         <app-element-color *ngIf="isThere(fret)" [note]="fret"></app-element-color>
+    </div>
+</div>

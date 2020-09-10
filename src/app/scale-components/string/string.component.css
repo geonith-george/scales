@@ -1,0 +1,25 @@
+.grid-container {
+    font-family: 'Quicksand', sans-serif; 
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    /* grid-gap: 5px; */
+  }
+
+div {
+    text-align: center;
+    font-size: 20px;
+    width: 73px;
+    margin: 1px;
+  }
+
+  .press{
+    background-color: tan;
+  }
+  
+  .root{
+    background-color: darksalmon;
+  }
+  
+  .fret{
+    background-color: antiquewhite;
+  }

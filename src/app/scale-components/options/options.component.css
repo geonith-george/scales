@@ -1,0 +1,32 @@
+ .grid-2 {
+    font-family: 'Quicksand', sans-serif; 
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 5px;
+    padding: 10px;
+  }
+  
+  .grid-2 > div {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .grid-3 {
+    font-family: 'Quicksand', sans-serif; 
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+    padding: 10px;
+  }
+  
+  .grid-3 > div {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .note {
+      text-align: center;
+      font-size: 20px;
+      width: 73px;
+      margin: 1px;
+  }
