@@ -24,9 +24,31 @@
     font-size: 20px;
   }
 
+  h4{
+    font-family: 'Quicksand', sans-serif; 
+    padding: 10px;
+  }
+
   .note {
       text-align: center;
       font-size: 20px;
       width: 73px;
       margin: 1px;
   }
+
+
+  div::-webkit-scrollbar-track
+{
+	background-color: white;
+}
+
+div::-webkit-scrollbar
+{
+	width: 2px;
+	background-color: white;
+}
+
+div::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}

@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <div class="grid-2">
+  <div class="grid-3">
     
     <div>      
       <input type="text" placeholder="Key" #key style="text-transform:lowercase;" value="a" required>
@@ -15,17 +15,32 @@
 
   </div>
 
+
   <div class="grid-3">
-    <div>
-      Scale: {{ scale_text }}
-    </div>
-    <div>
-      Chords: {{ chord }}
+    <h4>Scale</h4>
+    <div class="row">
+      <div *ngFor="let text of scale_text" class="col">
+        <p>{{ text }}</p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container-fluid">
+  <div class="grid-3">
+    <h4>Chord interval</h4>
+    <div class="row">
+      <div *ngFor="let chord_intervel of chord" class="col">
+        {{ chord_intervel }}
+      </div>
+    </div>
+    <h4>Guitar Fretboard</h4>
+  </div>
+
+    
+  
+  </div>
+
+
+<div class="container-fluid" style="overflow: scroll;">
   <app-string [string_name]="this.keys[7]" [scale]="this.scale_text"></app-string>
   <app-string [string_name]="this.keys[2]" [scale]="this.scale_text"></app-string>
   <app-string [string_name]="this.keys[10]" [scale]="this.scale_text"></app-string>
