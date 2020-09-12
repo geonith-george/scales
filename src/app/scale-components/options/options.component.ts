@@ -21,10 +21,12 @@ export class OptionsComponent implements OnInit {
   index_string_name: number;
   chromaic_scale: string[];
   count: number;
+  list_of_scales: string[];
 
   constructor() { 
     // this.major = 'w w h w w w h';
     // this.minor = 'w h w w h w w';
+    this.list_of_scales=['major','minor']
     this.keys = ['a', 'a#', 'b', 'c', 'c#', 'd', 'd#', 'e', 'f', 'f#', 'g' , 'g#'];
     this.val  = [ 0 ,  1  ,  2 ,  3 ,  4  ,  5 ,  6  ,  7 ,  8 ,  9  ,  10 ,  11 ];
     this.scale = [];
@@ -34,6 +36,16 @@ export class OptionsComponent implements OnInit {
   }
 
   print_scale(k2: HTMLInputElement, s2: HTMLInputElement) {
+
+
+    if (this.keys.includes(k2.value)==false || this.list_of_scales.includes(s2.value)==false){
+      this.scale = [];
+      this.scale_text = [];
+      this.chord=[];
+      this.chromaic_scale=[];
+       return 0; 
+      }
+
     this.k= k2.value;
     this.scale_text = [];
 
