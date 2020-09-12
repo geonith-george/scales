@@ -1,5 +1,9 @@
 <div class="container-fluid">
   <div class="grid-3">
+
+    <div>
+      <p>Available Scales: Major, Minor</p>
+    </div>
     
     <div>      
       <input type="text" placeholder="Key" #key style="text-transform:lowercase;" value="a" required>
@@ -10,14 +14,14 @@
     </div>
 
     <div>
-      <button (click)="print_scale(key, scale)">Submit</button>
+      <button (click)="print_scale(key, scale)" class="btn" style="border: 1px solid black">Submit</button>
     </div>
 
   </div>
 
 
+
   <div class="grid-3">
-    <h4>Scale</h4>
     <div class="row">
       <div *ngFor="let text of scale_text" class="col">
         <p>{{ text }}</p>
