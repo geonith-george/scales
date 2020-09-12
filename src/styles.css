@@ -13,3 +13,32 @@ body::-webkit-scrollbar-thumb
 {
 	background-color: #000000;
 }
+
+.home{
+    background-color: #CA7DF9;
+    height: 200px;
+    text-align: center;
+    padding-top: 80px;
+    font-family: 'Quicksand', sans-serif; 
+    color: white;
+    width: 100%;
+  }
+
+
+  
+
+@media screen and (orientation:portrait) {
+    .root{
+		display: none;
+	}
+
+
+}
+
+@media screen and (orientation:landscape) {
+
+	.orientation{
+		display: none;
+	}
+	
+}
