@@ -38,7 +38,7 @@ export class OptionsComponent implements OnInit {
   print_scale(k2: HTMLInputElement, s2: HTMLInputElement) {
 
 
-    if (this.keys.includes(k2.value)==false || this.list_of_scales.includes(s2.value)==false){
+    if (this.keys.includes(k2.value.toLowerCase())==false || this.list_of_scales.includes(s2.value.toLowerCase())==false){
       this.scale = [];
       this.scale_text = [];
       this.chord=[];
@@ -46,12 +46,12 @@ export class OptionsComponent implements OnInit {
        return 0; 
       }
 
-    this.k= k2.value;
+    this.k= k2.value.toLowerCase();
     this.scale_text = [];
 
     this.s ='w w h w w w h';
-    if (s2.value=='major'){ this.s= 'w w h w w w h'; this.chord=['I ii iii IV V vi viiᵒ']}
-    if (s2.value=='minor'){ this.s= 'w h w w h w w'; this.chord=['i iiᵒ III iv v VI VII']}
+    if (s2.value.toLowerCase()=='major'){ this.s= 'w w h w w w h'; this.chord=['I ii iii IV V vi viiᵒ']}
+    if (s2.value.toLowerCase()=='minor'){ this.s= 'w h w w h w w'; this.chord=['i iiᵒ III iv v VI VII']}
 
     this.scale = [];
     
